@@ -1,0 +1,28 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 0;
+}
+
+.row dt {
+  white-space: nowrap;
+  color: var(--ink-2);
+}
+
+.fill {
+  flex: 1;
+  min-width: 16px;
+  border-bottom: 1px dotted var(--rule-strong);
+  transform: translateY(-4px);
+}
+
+.row dd {
+  font-weight: 500;
+  text-align: right;
+}

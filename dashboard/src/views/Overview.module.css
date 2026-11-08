@@ -1,0 +1,140 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap) + 8px);
+}
+
+.waiting {
+  padding: 80px 0;
+  color: var(--ink-3);
+}
+
+.waiting h1 {
+  margin-bottom: 8px;
+  font-size: 44px;
+  color: var(--ink);
+}
+
+/* headline + title block, the head of the sheet */
+.lede {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 40px;
+  align-items: start;
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.detail {
+  max-width: 54ch;
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.advice {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 2px 0;
+  border-bottom: 2px solid var(--ink);
+  font-weight: 600;
+}
+
+.titleBlock {
+  width: 100%;
+  border: 1px solid var(--ink);
+  font-size: 13px;
+}
+
+.titleBlock th,
+.titleBlock td {
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: baseline;
+  border-bottom: 1px solid var(--ink);
+}
+
+.titleBlock tr:last-child th,
+.titleBlock tr:last-child td {
+  border-bottom: 0;
+}
+
+.titleBlock th {
+  width: 92px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border-right: 1px solid var(--ink);
+  white-space: nowrap;
+}
+
+.forTime {
+  color: var(--ink-3);
+}
+
+.notice {
+  padding: 12px 16px;
+  border: 1px solid var(--ink);
+  border-left-width: 5px;
+  color: var(--ink-2);
+}
+
+.notice b {
+  color: var(--ink);
+}
+
+/* the drawing */
+.figure {
+  min-width: 0;
+}
+
+.caption {
+  margin-top: 10px;
+  max-width: 78ch;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-3);
+}
+
+.compactList {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--ink);
+}
+
+.lower {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.empty {
+  color: var(--ink-3);
+}
+
+@media (max-width: 1000px) {
+  .lede {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .titleBlock {
+    max-width: 440px;
+  }
+
+  .lower {
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+  }
+}

@@ -1,0 +1,54 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap) + 8px);
+}
+
+.intro {
+  max-width: 56ch;
+  font-size: 17px;
+  color: var(--ink-2);
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: calc(var(--gap) + 8px) 56px;
+  align-items: start;
+}
+
+.note {
+  margin-top: 14px;
+  max-width: 60ch;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-3);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.details summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.pre {
+  margin: 14px 0 0;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 12.5px;
+  line-height: 1.7;
+  background: var(--paper-2);
+  border: 1px solid var(--rule-strong);
+}
+
+@media (max-width: 900px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+}

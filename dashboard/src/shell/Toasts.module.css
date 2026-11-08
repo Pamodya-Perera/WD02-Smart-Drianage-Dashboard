@@ -1,0 +1,95 @@
+/* Bottom corner, so notes never cover the headline or the drawing's callouts. */
+.stack {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  width: min(380px, calc(100vw - 32px));
+  pointer-events: none;
+}
+
+@media (min-width: 721px) {
+  .shifted {
+    right: 352px;
+  }
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  gap: 12px;
+  padding: 12px 10px 12px 14px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  animation: rise 0.22s ease-out;
+}
+
+.mark {
+  width: 9px;
+  height: 9px;
+  margin-top: 7px;
+  flex-shrink: 0;
+  background: var(--ink-3);
+}
+
+.warning .mark {
+  background: var(--warn);
+}
+
+.critical .mark {
+  background: var(--crit);
+}
+
+.info .mark {
+  background: var(--ok);
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.detail {
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.time {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.close {
+  align-self: flex-start;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--ink);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}

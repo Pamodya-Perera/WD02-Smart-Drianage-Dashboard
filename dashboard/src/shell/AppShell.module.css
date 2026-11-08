@@ -1,0 +1,223 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* masthead: serif wordmark over a double rule */
+.mast {
+  padding: 18px var(--pad) 0;
+  border-bottom: 1px solid var(--ink);
+  box-shadow: 0 3px 0 var(--paper), 0 4px 0 var(--ink);
+  margin-bottom: 5px;
+}
+
+.mastTop {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 2px;
+}
+
+.conn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.connSub {
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink-3);
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ink-3);
+}
+
+.connOn .dot {
+  background: var(--ok);
+}
+
+.connOff {
+  color: var(--crit-ink);
+}
+
+.connOff .dot {
+  background: var(--crit);
+}
+
+.wait {
+  animation: blink 1.2s steps(2, jump-none) infinite;
+}
+
+.pulse {
+  animation: ring 0.9s ease-out 1;
+}
+
+@keyframes ring {
+  from {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 60%, transparent);
+  }
+  to {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.stamp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 8px;
+  line-height: 1.15;
+  font-size: 13px;
+  cursor: help;
+}
+
+.stampLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  max-width: var(--measure);
+  margin: 14px auto 0;
+  overflow-x: auto;
+}
+
+.link {
+  position: relative;
+  padding: 8px 0 11px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-3);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.link:hover {
+  color: var(--ink);
+}
+
+.active {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.count {
+  margin-left: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--warn-ink);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: calc(var(--measure) + var(--pad) * 2);
+  margin: 0 auto;
+  padding: var(--gap) var(--pad) 56px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: calc(var(--measure) + var(--pad) * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px var(--pad) 24px;
+  border-top: 1px solid var(--rule-strong);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.fatal {
+  padding: 24px;
+  border: 1px solid var(--crit);
+  color: var(--crit-ink);
+}
+
+.fatal h2 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 720px) {
+  .wordmark {
+    font-size: 28px;
+  }
+
+  .btnText {
+    display: none;
+  }
+
+  .tools {
+    width: 100%;
+  }
+
+  .stamp {
+    margin-left: auto;
+  }
+
+  .nav {
+    gap: 22px;
+  }
+}

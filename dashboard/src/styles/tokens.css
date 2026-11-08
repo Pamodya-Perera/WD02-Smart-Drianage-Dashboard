@@ -1,0 +1,63 @@
+/*
+  Field sheet: an engineer's drawing sheet. Paper, technical-pen ink, one water-wash blue.
+  Status colours exist in the hardware (the LEDs on the ESP32 box) and on the threshold
+  lines. They are never used as page fills.
+*/
+:root {
+  --paper: #f3f2ec;
+  --paper-2: #eae8e0;
+  --ink: #17233a;
+  --ink-2: #4a566b;
+  --ink-3: #6b7587;
+  --rule: #d2cec2;
+  --rule-strong: #a9a597;
+
+  --water: #2b6c9b;
+  --water-wash: rgba(43, 108, 155, 0.2);
+
+  --ok: #2f7d5a;
+  --ok-ink: #25664a;
+  --warn: #c27a06;
+  --warn-ink: #8a5300;
+  --crit: #c23a2e;
+  --crit-ink: #a52e24;
+
+  --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --font-sans: 'Geist Variable', 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono Variable', 'Geist Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+
+  --pad: 32px;
+  --gap: 28px;
+  --measure: 1240px;
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --paper: #0f151d;
+  --paper-2: #0b1017;
+  --ink: #dde5ee;
+  --ink-2: #a3afbf;
+  --ink-3: #7b8899;
+  --rule: #263140;
+  --rule-strong: #3d4a5c;
+
+  --water: #6fb4e2;
+  --water-wash: rgba(111, 180, 226, 0.2);
+
+  --ok: #4fd08f;
+  --ok-ink: #6adba0;
+  --warn: #f2b23e;
+  --warn-ink: #f5c262;
+  --crit: #ff7468;
+  --crit-ink: #ff8f85;
+
+  color-scheme: dark;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --pad: 16px;
+    --gap: 22px;
+  }
+}

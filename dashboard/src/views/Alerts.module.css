@@ -1,0 +1,27 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap) + 8px);
+}
+
+.intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.intro p {
+  max-width: 56ch;
+  font-size: 17px;
+  color: var(--ink-2);
+}
+
+.n {
+  opacity: 0.6;
+}
+
+.empty {
+  color: var(--ink-3);
+}

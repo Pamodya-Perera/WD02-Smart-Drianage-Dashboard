@@ -1,0 +1,137 @@
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  width: 336px;
+  max-width: 100vw;
+  overflow-y: auto;
+  background: var(--paper);
+  border-left: 1px solid var(--ink);
+  box-shadow: -6px 0 0 var(--paper-2);
+  animation: in 0.2s ease-out;
+}
+
+@keyframes in {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.headTitle {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.sub {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.section {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.section h3 {
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.scenarios {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.scenario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  padding: 9px 12px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.scenario:hover {
+  border-color: var(--ink);
+}
+
+.current {
+  border-color: var(--ink);
+  background: var(--paper-2);
+}
+
+.scName {
+  font-weight: 600;
+}
+
+.scHint {
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--ink);
+}
+
+.sliderRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.sliderRow span:nth-child(2) {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.note {
+  margin-top: 8px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-3);
+}
+
+.state {
+  border-bottom: 0;
+}
+
+.dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 14px;
+  font-size: 14px;
+}
+
+.dl dt {
+  color: var(--ink-3);
+}
+
+.dl dd {
+  text-align: right;
+}
